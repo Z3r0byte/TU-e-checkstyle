@@ -34,14 +34,14 @@
     <!-- See http://checkstyle.sf.net/config_whitespace.html -->
     <module name="FileTabCharacter"> <!-- Rule 5 of the TU/e coding conventions -->
         <property name="eachLine" value="true"/>
-        <property name="message" value="The source code must not contain any TAB characters (\t) as stated in rule 5 of the TU/e coding conventions."/>
+        <message key="containsTab" value="The source code must not contain any TAB characters (\t) as stated in rule 5 of the TU/e coding conventions."/>
     </module>
 
     <module name="LineLength"> <!-- Rule 6 of the TU/e coding conventions -->
         <property name="fileExtensions" value="java"/>
         <property name="max" value="120"/> 
         <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
-        <property name="message" value="This line exceeds the maximum length of 120 characters and is in violoation of rule number 6 of the TU/e."/>
+        <message key="maxLineLen" value="This line exceeds the maximum length of 120 characters and is in violoation of rule number 6 of the TU/e."/>
     </module>
 
     <module name="TreeWalker">
@@ -67,11 +67,11 @@
              value="LITERAL_TRY, LITERAL_FINALLY, LITERAL_IF, LITERAL_ELSE, LITERAL_SWITCH"/>
         </module>
         <module name="NeedBraces"> <!-- Rule 12 of the TU/e coding conventions -->
-            <property name="message"
+            <message key="needBraces"
              value="Use braces after keywords and don't use single line statements. (Rule 12 of the TU/e coding conventions.)"/>
         </module>
         <module name="LeftCurly"> <!-- Rule 13 of the TU/e coding conventions -->
-            <property name="message"
+            <message key="line.previous"
              value="Make sure to put opening braces on the same line as the statement. See rule number 13 of the TU/e coding conventions."/>
         </module>
         <module name="RightCurly"> <!-- Rule 14 of the TU/e coding conventions -->
@@ -79,7 +79,7 @@
             <property name="tokens"
              value="LITERAL_TRY, LITERAL_CATCH, LITERAL_FINALLY, LITERAL_IF, LITERAL_ELSE,
                     LITERAL_DO"/>
-            <property name="message"
+            <message key="line.same"
              value="Always put the closing braces on a new line and put keywords on the same line as the closing braces. See rule number 14 of the TU/e coding conventions."/>
         </module>
         <module name="RightCurly"> <!-- Rule 14 of the TU/e coding conventions -->
@@ -88,7 +88,7 @@
             <property name="tokens"
              value="CLASS_DEF, METHOD_DEF, CTOR_DEF, LITERAL_FOR, LITERAL_WHILE, STATIC_INIT,
                     INSTANCE_INIT"/>
-            <property name="message"
+            <message key="line.alone"
              value="Always put the closing braces on a new line and do not put new class/method names on the same line as the closing braces. See rule number 14 of the TU/e coding conventions."/>
         </module>
         <module name="WhitespaceAround"> <!-- Rule 11 of the TU/e coding conventions -->
@@ -207,7 +207,6 @@
             <property name="throwsIndent" value="4"/>
             <property name="lineWrappingIndentation" value="4"/>
             <property name="arrayInitIndent" value="4"/>
-            <property name="message" value="Indentation should be a multiple of 4 as stated in rule 4 of the TU/e conventions."/>
         </module>
         <module name="AbbreviationAsWordInName">
             <property name="ignoreFinal" value="false"/>
@@ -247,7 +246,7 @@
         <module name="NonEmptyAtclauseDescription"/>
         <module name="JavadocVariable"> <!-- Rule 15 of the TU/e coding conventions -->
             <property name="severity" value="warning" />
-            <property name="message" value="Explain variable declarations when nescessary as stated in rule 15 of the TU/e conventions."/>
+            <message key="javadoc.missing" value="Explain variable declarations when nescessary as stated in rule 15 of the TU/e conventions."/>
         </module>
         <module name="InvalidJavadocPosition"/>
         <module name="JavadocTagContinuationIndentation"/>
@@ -264,13 +263,12 @@
             <property name="allowMissingReturnTag" value="true"/>
             <property name="allowedAnnotations" value="Override, Test"/>
             <property name="allowThrowsTagsForSubclasses" value="true"/>
-            <property name="message" value="Methods should contain a comment block (javadoc). See rule 16 of the TU/e coding conventions."/>
         </module>
         <module name="MissingJavadocMethod"> <!-- Rule 16 of the TU/e coding conventions -->
             <property name="scope" value="public"/>
             <property name="allowedAnnotations" value="Override, Test"/>
             <property name="allowMissingPropertyJavadoc" value="true"/>
-            <property name="message" value="Methods should contain a comment block (javadoc). See rule 16 of the TU/e coding conventions."/>
+            <message key="javadoc.missing" value="Methods should contain a comment block (javadoc). See rule 16 of the TU/e coding conventions."/>
         </module>
         <module name="MethodName"> <!-- Rule 2 of the TU/e coding conventions -->
             <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9_]*$"/>
